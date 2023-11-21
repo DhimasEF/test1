@@ -1,13 +1,14 @@
 * {
 	margin: 0;
 	padding: 0;
+	box-sizing: border-box;
 }
 
 body {
 	background-color: white;
 	color: black;
 	font-family: Ubuntu;
-	width: 100%;
+	max-width: 100%;
 }
 
 html {
@@ -389,8 +390,14 @@ footer p{
 }
 
 @media screen and (max-width:480px) {
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+
 	body {
-		width: 100%;
+		max-width: 480px;
 	}
 	
 	nav {
