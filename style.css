@@ -1,0 +1,765 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: white;
+	color: black;
+	font-family: Ubuntu;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+nav {
+	position: fixed;
+	background: #D64541;
+	width: 100%;
+	height: 50px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	border-bottom: 2px solid  #B21806;
+	z-index: 10;
+}
+
+.nav-left {
+	display: flex;
+	align-items: center;
+	font-size: 14px;
+	margin: 0 600px 0 0;
+}
+
+.nav-left img{
+	margin: 0 5px 0 0;
+	width: 35px;
+	height: 35px;
+}
+
+.nav-right ul {
+	display: flex;
+	flex-direction: row;
+}
+
+.nav-right ul li {
+	list-style: none;
+	margin: 0 10px 0 10px;
+}
+
+.nav-right ul li a {
+	text-decoration: none;
+	font-size: 14px;
+	font-weight: 500;
+	color: black;
+	transition: 0.6s;
+}
+
+.nav-right ul li a:hover {
+	color: #B21806;
+	transition: 0.6s;
+}
+
+#database,
+#accessdatabase {
+	width: 100%;
+	height: 600px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+h1 {
+	margin: 0 0 20px 0;
+}
+
+.dba-ground {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.card-dba {
+	background-color: #B21806;
+	border-radius: 15px;
+	margin: 0 20px 0 20px;
+	width: 300px;
+	height: 300px;
+}
+
+.card-dba img{
+	border-radius: 15px;
+	width: 300px;
+	height: 300px;
+}
+
+.ctn-dba {
+	font-family: ubuntu;
+	border-radius: 15px;
+	width: 300px;
+	height: 300px;
+	top: 175px;
+	position: absolute;
+	background: rgba(0,0,0,0.6);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	opacity: 0;
+	transition: 0.6s;
+}
+
+.ctn-dba:hover {
+	opacity: 1;
+}
+
+.ctn-dba img {
+	width: 150px;
+	height: 60px;
+}
+
+.ctn-dba h1 {
+	font-size: 24px;
+	color: white;
+}
+
+.ctn-dba p {
+	font-size: 12px;
+	color: white;
+}
+
+.ctn-dba a{
+	text-decoration: none;
+	font-family: ubuntu;
+	margin: 5px 10px 0 0;
+	color: #C4224C;
+	text-align: center;
+	display: inline-block;
+	font-size: 12px;
+	width: 100px;
+	border-radius: 25px;
+	border: 2px solid #C4224C;
+	padding: 5px;
+	background: transparent;
+	transition: 0.6s;
+}
+
+.ctn-dba a:hover{
+	color: white;
+	background: #C4224C;
+	transition: 0.6s;
+}
+
+.ctn-dba > * {
+	transform: translateY(25px);
+	transition: transform 0.6s;
+}
+
+.ctn-dba:hover > * {
+	transform: translateY(0px);
+}
+
+#sqlserver {
+	width: 100%;
+	height: 600px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background: #D64541;
+}
+
+.wrp {
+	z-index: 6;
+	height: 600px;
+	border-radius: 40px;
+	width: 1200px;
+	overflow: hidden;
+}
+
+#sql1:target ~ .sql-all,
+#acdb1:target ~ .acdb-all {
+	transform: translateX(0px);
+	transition: transform 0.6s;
+}
+
+#sql2:target ~ .sql-all,
+#acdb2:target ~ .acdb-all {
+	transform: translateX(-1100px);
+	transition: transform 0.6s;
+}
+
+#sql3:target ~ .sql-all,
+#acdb3:target ~ .acdb-all {
+	transform: translateX(-2380px);
+	transition: transform 0.6s;
+}
+
+.sql-all,
+.acdb-all {
+	width:100%;
+	display: flex;
+}
+
+.sql-pp1 {
+	margin: 150px 100px 0 100px;
+	z-index: 2;
+	height: 300px;
+	border-radius: 40px;
+	width: 1000px;
+	background-color: #B21806;
+	background-image: url(../assets/ovr1.png);
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	color: white;
+}
+
+.img-sql-rdr {
+	margin: -50px 20px 0 0;
+	width: 400px;
+	height: 400px;
+}
+
+.lg-sql {
+	margin: 0 0 0 400px;
+	width: 100px;
+	height: 40px;
+}
+
+.sql-pp-txt {
+	width: 520px;
+}
+
+.sql-pp-txt h2 {
+	margin: 25px 0 0 0;
+	font-size: 26px;
+}
+
+.sql-pp-txt p {
+	margin: 10px 0 20px 0;
+	width: 450px;
+	font-size: 13px;
+}
+
+.sql-pp-txt a {
+	font-size: 13px;
+	padding: 5px 10px;
+	display: inline-block;
+	color: white;
+	text-decoration: none;
+	border-radius: 20px;
+	border: 2px solid white;
+	transition: 0.6s;
+}
+
+.sql-pp-txt a:hover {
+	transition: 0.6s;
+	color:  #C4224C;
+	border: 2px solid  #C4224C;
+}
+
+.sql-pp2 {
+	margin: 150px 200px 0 100px;
+	z-index: 2;
+	height: 300px;
+	border-radius: 40px;
+	width: 1000px;
+	background-color: #B21806;
+	background-image: url(../assets/ovr1.png);
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	color: white;
+}
+
+.sql-pp3 {
+	margin: 150px 100px 0 0;
+	z-index: 2;
+	height: 300px;
+	width: 1200px;
+	background-image: url(../assets/ovr3.png);
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	color: white;
+}
+
+.sql-rdr {
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	width: 400px;
+}
+
+.sql-rdr a {
+	padding: 5px 10px;
+	display: inline-block;
+	color: white;
+	text-decoration: none;
+	border-radius: 20px;
+	border: 2px solid white;
+	transition: 0.6s;
+}
+
+.sql-rdr a:hover {
+	transition: 0.6s;
+	color:  #C4224C;
+	border: 2px solid  #C4224C;
+}
+
+.sql-rdr img {
+	margin: 0 0 20px 0;
+	width: 300px;
+}
+
+.sql-rdr1 {
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	width: 400px;
+}
+
+.sql-rdr1 a {
+	font-size: 13px;
+	padding: 5px 10px;
+	display: inline-block;
+	color: black;
+	text-decoration: none;
+	border-radius: 20px;
+	border: 2px solid black;
+	transition: 0.6s;
+}
+
+.sql-rdr1 a:hover {
+	transition: 0.6s;
+	color:  #C4224C;
+	border: 2px solid  #C4224C;
+}
+
+.sql-rdr1 img {
+	margin: 0 0 20px 0;
+	width: 300px;
+}
+
+.lg-sql1 {
+	margin: 0 0 0 280px;
+	width: 100px;
+	height: 40px;
+}
+
+.sql-pp-txt1 {
+	background-color: #B21806;
+	border-radius: 40px;
+	width: 400px;
+}
+
+.sql-pp-txt1 h2 {
+	margin: 25px 0 0 30px;
+	font-size: 26px;
+}
+
+.sql-pp-txt1 p {
+	margin: 20px 0 20px 30px;
+	width: 450px;
+	font-size: 13px;
+}
+
+footer {
+	background-color: black;
+	color: white;
+	width: 100%;
+	height: 60px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+footer p{
+	font-size: 14px;
+	text-align: center;
+}
+
+@media screen and (max-width:480px) {
+	nav {
+		position: fixed;
+		background: #D64541;
+		width: 100%;
+		height: 70px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		border-bottom: 2px solid  #B21806;
+		z-index: 10;
+	}
+
+	.nav-left {
+		display: flex;
+		align-items: center;
+		font-size: 14px;
+		margin: 0 0 0 0;
+	}
+
+	.nav-left img{
+		margin: 0 5px 0 0;
+		width: 25px;
+		height: 25px;
+	}
+
+	.nav-right ul {
+		display: flex;
+		flex-direction: row;
+	}
+
+	.nav-right ul li {
+		list-style: none;
+		margin: 10px 10px 0 10px;
+	}
+
+	.nav-right ul li a {
+		text-decoration: none;
+		font-size: 14px;
+		font-weight: 500;
+		color: black;
+		transition: 0.6s;
+	}
+
+	.nav-right ul li a:hover {
+		color: #B21806;
+		transition: 0.6s;
+	}
+
+	#database,
+	#accessdatabase {
+		width: 100%;
+		height: 400px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	h1 {
+		margin: 0 0 20px 0;
+	}
+
+	.dba-ground {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.card-dba {
+		background-color: #B21806;
+		border-radius: 15px;
+		margin: 0 10px 0 10px;
+		width: 200px;
+		height: 200px;
+	}
+
+	.card-dba img{
+		border-radius: 15px;
+		width: 200px;
+		height: 200px;
+	}
+
+	.ctn-dba {
+		font-family: ubuntu;
+		border-radius: 15px;
+		width: 200px;
+		height: 200px;
+		top: 125px;
+		position: absolute;
+		background: rgba(0,0,0,0.6);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		opacity: 0;
+		transition: 0.6s;
+	}
+
+	.ctn-dba:hover {
+		opacity: 1;
+	}
+
+	.ctn-dba img {
+		width: 150px;
+		height: 60px;
+	}
+
+	.ctn-dba h1 {
+		font-size: 24px;
+		color: white;
+	}
+
+	.ctn-dba p {
+		font-size: 12px;
+		color: white;
+	}
+
+	.ctn-dba a{
+		text-decoration: none;
+		font-family: ubuntu;
+		margin: 5px 10px 0 0;
+		color: #C4224C;
+		text-align: center;
+		display: inline-block;
+		font-size: 12px;
+		width: 100px;
+		border-radius: 25px;
+		border: 2px solid #C4224C;
+		padding: 5px;
+		background: transparent;
+		transition: 0.6s;
+	}
+
+	.ctn-dba a:hover{
+		color: white;
+		background: #C4224C;
+		transition: 0.6s;
+	}
+
+	.ctn-dba > * {
+		transform: translateY(25px);
+		transition: transform 0.6s;
+	}
+
+	.ctn-dba:hover > * {
+		transform: translateY(0px);
+	}
+
+	#sqlserver {
+		width: 100%;
+		height: 400px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		background: #D64541;
+	}
+
+	.wrp {
+		z-index: 6;
+		height: 600px;
+		border-radius: 40px;
+		width: 450px;
+		overflow: hidden;
+	}
+
+	#sql1:target ~ .sql-all,
+	#acdb1:target ~ .acdb-all {
+		transform: translateX(0px);
+		transition: transform 0.6s;
+	}
+
+	#sql2:target ~ .sql-all,
+	#acdb2:target ~ .acdb-all {
+		transform: translateX(-650px);
+		transition: transform 0.6s;
+	}
+
+	#sql3:target ~ .sql-all,
+	#acdb3:target ~ .acdb-all {
+		transform: translateX(-1300px);
+		transition: transform 0.6s;
+	}
+
+	.sql-all,
+	.acdb-all {
+		width:100%;
+		display: flex;
+	}
+
+	.sql-pp1 {
+		margin: 150px 100px 0 0px;
+		z-index: 2;
+		height: 200px;
+		border-radius: 40px;
+		width: 450px;
+		background-color: #B21806;
+		background-image: url(../assets/ovr1.png);
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		color: white;
+	}
+
+	.img-sql-rdr {
+		margin: 0px 0px 0 0;
+		width: 200px;
+		height: 200px;
+	}
+
+	.lg-sql {
+		margin: 0 0 0 150px;
+		width: 75px;
+		height: 30px;
+	}
+
+	.sql-pp-txt {
+		width: 250px;
+	}
+
+	.sql-pp-txt h2 {
+		margin: 5px 0 0 0;
+		font-size: 20px;
+	}
+
+	.sql-pp-txt p {
+		margin: 5px 0 5px 0;
+		width: 230px;
+		font-size: 10px;
+	}
+
+	.sql-pp-txt a {
+		font-size: 10px;
+		padding: 0px 5px;
+		display: inline-block;
+		color: white;
+		text-decoration: none;
+		border-radius: 20px;
+		border: 2px solid white;
+		transition: 0.6s;
+	}
+
+	.sql-pp-txt a:hover {
+		transition: 0.6s;
+		color:  #C4224C;
+		border: 2px solid  #C4224C;
+	}
+
+	.sql-pp2 {
+		margin: 150px 200px 0 100px;
+		z-index: 2;
+		height: 200px;
+		border-radius: 40px;
+		width: 450px;
+		background-color: #B21806;
+		background-image: url(../assets/ovr1.png);
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		color: white;
+	}
+
+	.sql-pp3 {
+		margin: 150px 100px 0 0;
+		z-index: 2;
+		height: 200px;
+		width: 450px;
+		background-image: url(../assets/ovr3.png);
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		color: white;
+	}
+
+	.sql-rdr {
+		justify-content: center;
+		align-items: center;
+		display: flex;
+		flex-direction: column;
+		width: 50px;
+	}
+
+	.sql-rdr a {
+		font-size: 10px;
+		padding: 0px 5px;
+		display: inline-block;
+		color: white;
+		text-decoration: none;
+		border-radius: 20px;
+		border: 2px solid white;
+		transition: 0.6s;
+	}
+
+	.sql-rdr a:hover {
+		transition: 0.6s;
+		color:  #C4224C;
+		border: 2px solid  #C4224C;
+	}
+
+	.sql-rdr img {
+		margin: 0 0 20px 0;
+		width: 50px;
+	}
+
+	.sql-rdr1 {
+		justify-content: center;
+		align-items: center;
+		display: flex;
+		flex-direction: column;
+		width: 50px;
+	}
+
+	.sql-rdr1 a {
+		font-size: 10px;
+		padding: 0px 5px;
+		display: inline-block;
+		color: black;
+		text-decoration: none;
+		border-radius: 20px;
+		border: 2px solid black;
+		transition: 0.6s;
+	}
+
+	.sql-rdr1 a:hover {
+		transition: 0.6s;
+		color:  #C4224C;
+		border: 2px solid  #C4224C;
+	}
+
+	.sql-rdr1 img {
+		margin: 0 0 20px 0;
+		width: 50px;
+	}
+
+	.lg-sql1 {
+		margin: 0 0 0 100px;
+		width: 75px;
+		height: 30px;
+	}
+
+	.sql-pp-txt1 {
+		background-color: #B21806;
+		border-radius: 40px;
+		width: 200px;
+	}
+
+	.sql-pp-txt1 h2 {
+		margin: 15px 0 0 20px;
+		font-size: 20px;
+	}
+
+	.sql-pp-txt1 p {
+		margin: 10px 0 20px 20px;
+		width: 180px;
+		font-size: 10px;
+	}
+
+	footer {
+		background-color: black;
+		color: white;
+		width: 100%;
+		height: 50px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+
+	footer p{
+		font-size: 11px;
+		text-align: center;
+	}
+}
